@@ -42,3 +42,8 @@ https://github.com/GeekyAnts/NativeBase/issues/3358
 ### 2. Instructions to run the unit test:
 
 > yarn test 
+
+
+<p align="center">
+    <img src="./App/assets/aplication.gif" width="100%" alt="option 1">
+</p>
