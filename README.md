@@ -38,6 +38,7 @@ ________________________________________________________________________________
 
 <p align="center">
     <img src="./App/assets/aplication.gif" width="100%" alt="option 1">
+    <img src="./App/assets/warnin.gif" width="50%" alt="option 1">
 </p>
 
 ## Comments 
