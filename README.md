@@ -26,14 +26,6 @@ The body should be JSON and contain `emailAddress` and `mobileNumber` fields
 - You are encouraged to add comments in the code, or by extending this readme file explaining logic or reasoning for your decisions.
 ______________________________________________________________________________________________________________________________________
 
-## Comments 
-
-There is a bug with the native base tabs, so I leave it that way for a while, but the ideal would be to use the navigation ones.
-
-They are trying to fix it:
-```
-https://github.com/GeekyAnts/NativeBase/issues/3358
-```
 ### 1.  Instructions to run the project:
 
 > yarn install
@@ -47,3 +39,12 @@ https://github.com/GeekyAnts/NativeBase/issues/3358
 <p align="center">
     <img src="./App/assets/aplication.gif" width="100%" alt="option 1">
 </p>
+
+## Comments 
+
+There is a bug with the native base tabs, so I leave it that way for a while, but the ideal would be to use the navigation ones.
+
+They are trying to fix it:
+```
+https://github.com/GeekyAnts/NativeBase/issues/3358
+```
