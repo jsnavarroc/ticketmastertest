@@ -1,18 +1,22 @@
 import { useCallback, useState } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
 import { wait, getFans } from './functions';
+import { useStorage } from '../../../storage/index';
 
 const useListRegistered = () => {
   const [dataFans, setDataFans] = useState({
     loading: false,
     error: '',
     data: [],
+    status: 0,
   });
   const [refreshing, setRefreshing] = useState(false);
+  const { dispatch } = useStorage();
 
   useFocusEffect(
     useCallback(() => {
-      getFans(setDataFans);
+      setDataFans(prev => ({ ...prev, loading: true }));
+      getFans({ setDataFans, dispatch });
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refreshing]),
   );

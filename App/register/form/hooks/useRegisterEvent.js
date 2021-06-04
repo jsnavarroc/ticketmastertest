@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import { useStorage } from '../../../storage/index';
-import { configureYup, pesistElements, controlErrorMessage } from './functions';
+import { configureYup, pesistElements } from './functions';
+import { controlErrorMessage } from '../../../commons/alert/functions';
 
 const useRegisterEvent = () => {
   const [loading, setLoading] = useState(false);

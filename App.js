@@ -2,7 +2,7 @@ import React from 'react';
 import { createServer } from 'miragejs';
 import MainNavigation from './App/navigation/MainNavigation';
 import Storage from './App/storage/index';
-import Alert from './App/commons/Alert';
+import Alert from './App/commons/alert/Alert';
 
 if (window.server) {
   server.shutdown();

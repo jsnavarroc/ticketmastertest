@@ -1,10 +1,10 @@
 import React from 'react';
 import get from 'lodash/get';
-import { bluetikets } from '../utils/colors';
+import { bluetikets } from '../../utils/colors';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import { StyleSheet, View } from 'react-native';
-import { width, height } from '../utils/dimensions';
-import { useStorage } from '../storage/index';
+import { width, height } from '../../utils/dimensions';
+import { useStorage } from '../../storage/index';
 
 const Alert = () => {
   const { storage } = useStorage();

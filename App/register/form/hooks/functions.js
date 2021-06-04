@@ -1,8 +1,4 @@
 import * as yup from 'yup';
-import {
-  showAlertInfoAct,
-  showAlertInfoCleanAct,
-} from '../../../storage/reducer/actionsCreators';
 
 export const configureYup = workflowEdit => {
   const phoneRegExp =
@@ -31,25 +27,4 @@ export const pesistElements = async newRegister => {
     data = { status: 500 };
   }
   return data?.status === 201 ? data.status : 500;
-};
-
-export const controlErrorMessage = elements => {
-  const { codeExute, message, title, dispatch } = elements;
-  const defaultPropsAlert = {
-    confirmText: 'Ok',
-    onCancelPressed: () => {
-      showAlertInfoCleanAct({ dispatch });
-    },
-    onConfirmPressed: () => {
-      showAlertInfoCleanAct({ dispatch });
-    },
-  };
-  const showAlertInfo = {
-    show: true,
-    title,
-    message,
-    codeExute,
-    ...defaultPropsAlert,
-  };
-  showAlertInfoAct({ dispatch, showAlertInfo });
 };
