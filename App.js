@@ -1,6 +1,8 @@
 import React from 'react';
 import { createServer } from 'miragejs';
 import MainNavigation from './App/navigation/MainNavigation';
+import Storage from './App/storage/index';
+import Alert from './App/commons/Alert';
 
 if (window.server) {
   server.shutdown();
@@ -24,5 +26,10 @@ window.server = createServer({
 });
 
 export default function App() {
-  return <MainNavigation />;
+  return (
+    <Storage>
+      <MainNavigation />
+      <Alert />
+    </Storage>
+  );
 }

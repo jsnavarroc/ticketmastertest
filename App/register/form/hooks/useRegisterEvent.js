@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useFormik } from 'formik';
-import { configureYup, pesistElements } from './functions';
+import { useStorage } from '../../../storage/index';
+import { configureYup, pesistElements, controlErrorMessage } from './functions';
 
 const useRegisterEvent = () => {
   const [loading, setLoading] = useState(false);
+  const { dispatch } = useStorage();
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -17,6 +19,13 @@ const useRegisterEvent = () => {
         mobileNumber: values.mobileNumber,
       });
       status && setLoading(false);
+      status === 500 &&
+        controlErrorMessage({
+          dispatch,
+          codeExute: 'checkSessions',
+          title: 'Registration error',
+          message: "Your registration wasn't possible; please try again later.",
+        });
       formik.handleReset();
     },
   });
